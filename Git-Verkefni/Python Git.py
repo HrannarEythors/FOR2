@@ -36,24 +36,20 @@ else:
 print("<-----DÆMI 3----->")
 #Bið um texta
 texti = input("Skrifaðu texta ")
-#Bý til lista
-hastafur = []
-lagstafur = []
-lageftirha = []
 teljari = 0
+hastafur = 0
+lagstafur = 0
+lageftirha = 0
 #Keyri þeta jafnt oft og lengd textans
 for x in range(len(texti)):
     teljari+=1
     #Gá hvort stafurinn sé stór
     if texti[x].isupper():
-        x2 = x-x+1
-        hastafur.append(x2)
+        hastafur+=1
         #Gá hvort stafurinn á eftir sé lágr
         if texti[teljari].islower():
-            teljari2 = teljari-teljari+1
-            lageftirha.append(teljari2)
+            lageftirha+=1
     #Gá hvort stafurinn sé lágr
     if texti[x].islower():
-        x2 = x-x+1
-        lagstafur.append(x2)
-print("Það eru",sum(hastafur),"hástafir og",sum(lagstafur),"lágstafir og koma",sum(lageftirha),"lágstafir eftir hástafi")
+        lagstafur+=1
+print("Það eru",hastafur,"hástafir og",lagstafur,"lágstafir og koma",lageftirha,"lágstafir eftir hástafi")
